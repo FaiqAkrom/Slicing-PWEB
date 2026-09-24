@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faiq Akrom — Product Designer</title>
+  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="nav">
+    <span class="mark">Faiq Akrom</span>
+    <nav>
+      <a href="#karya">Karya</a>
+      <a href="#dokumentasi">Dokumentasi</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Tugas PWEB katanya disuruh ngiris-ngiris (slicing)</h1>
+    <p>Muhamad Faiq Akrom Asy Syarofi<br>252410102042</p>
+    <p>Tugas Praktikum PWEB-B</p>
+  </section>
+
+  <hr>
+
+  <section class="karya" id="karya">
+    <div class="section-head">
+      <h2>Karya Terpilih</h2>
+      <div class="filter" id="filter">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="app">Aplikasi</button>
+        <button class="filter-btn" data-filter="game">Game</button>
+      </div>
+    </div>
+
+    <div class="work-list" id="workList">
+      <a href="#doc-1" class="work-item" data-cat="game">
+        <span class="work-year">2026</span>
+        <span class="work-name">Chaosmal Defense — Turn Based Game</span>
+        <span class="work-role">Game Developer <span class="work-arrow">&darr;</span></span>
+      </a>
+      <a href="#doc-2" class="work-item" data-cat="app">
+        <span class="work-year">2025</span>
+        <span class="work-name">Chemlink — Projek Akhir PBO</span>
+        <span class="work-role">App Developer <span class="work-arrow">&darr;</span></span>
+      </a>
+      <a href="#doc-3" class="work-item" data-cat="game">
+        <span class="work-year">2024</span>
+        <span class="work-name">Kill 'em — 2d Platformer Game</span>
+        <span class="work-role">Game Developer <span class="work-arrow">&darr;</span></span>
+      </a>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="dokumentasi" id="dokumentasi">
+    <div class="section-head">
+      <h2>Dokumentasi Proyek</h2>
+      <a href="#karya" class="doc-link-karya">
+        <span>Lihat Semua Karya</span>
+        <span aria-hidden="true">&uarr;</span>
+      </a>
+    </div>
+    <p class="doc-desc">
+      Ini bagian dokumentasi dari portofolio dalam arti lain clip atau tangkapan layar dari projek yang pernah dikerjakan <a href="#karya">Karya &uarr;</a> untuk
+      langsung melompat ke dokumentasi proyek terkait.
+    </p>
+
+    <!-- Slot Dokumentasi Proyek -->
+    <div class="doc-slots">
+      <!-- Slot 1 -->
+      <article class="doc-slot" id="doc-1">
+        <div class="doc-slot-header">
+          <div class="doc-slot-meta">
+            <span class="doc-slot-badge">Slot 01</span>
+            <h3 class="doc-slot-title">Chaosmal Defense — Turn Based Game</h3>
+            <span class="doc-slot-tag">2026 • Game</span>
+          </div>
+          <a href="#karya" class="doc-back-link">&uarr; Kembali ke Karya</a>
+        </div>
+        <figure class="doc-slot-frame">
+          <img src="ss1.png" alt="Chaosmal Defense" class="doc-img">
+        </figure>
+      </article>
+
+      <!-- Slot 2 -->
+      <article class="doc-slot" id="doc-2">
+        <div class="doc-slot-header">
+          <div class="doc-slot-meta">
+            <span class="doc-slot-badge">Slot 02</span>
+            <h3 class="doc-slot-title">Chemlink — Projek Akhir PBO</h3>
+            <span class="doc-slot-tag">2025 • Aplikasi</span>
+          </div>
+          <a href="#karya" class="doc-back-link">&uarr; Kembali ke Karya</a>
+        </div>
+        <figure class="doc-slot-frame">
+          <img src="ss2.png" alt="Chemlink" class="doc-img">
+        </figure>
+      </article>
+
+      <!-- Slot 3 -->
+      <article class="doc-slot" id="doc-3">
+        <div class="doc-slot-header">
+          <div class="doc-slot-meta">
+            <span class="doc-slot-badge">Slot 03</span>
+            <h3 class="doc-slot-title">Kill 'em — 2d Platformer Game</h3>
+            <span class="doc-slot-tag">2024 • Game</span>
+          </div>
+          <a href="#karya" class="doc-back-link">&uarr; Kembali ke Karya</a>
+        </div>
+        <figure class="doc-slot-frame">
+          <img src="ss3.png" alt="Kill 'em" class="doc-img">
+        </figure>
+      </article>
+    </div>
+  </section>
+
+  <hr>
+
+  <footer class="kontak" id="kontak">
+    <h2>Mari berdiskusi</h2>
+    <a href="mailto:252410102042@mail.unej.ac.id" class="email">252410102042@mail.unej.ac.id</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
