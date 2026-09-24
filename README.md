@@ -50,7 +50,7 @@ Dokumentasi & Tangkapan Layar (SS)
 
 Berikut tangkapan layar (*screenshot*) dari proyek-proyek yang ditampilkan dalam slot dokumentasi portofolio:
 
-### 1. Chaosmal Defense — Turn Based Game (2026)
+### 1. Chaosmal Defense — Tower Defense Game (2026)
 *Kategori: Game Developer*
 ![Chaosmal Defense](ss1.png)
 

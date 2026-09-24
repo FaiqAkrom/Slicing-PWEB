@@ -16,11 +16,17 @@
 
   <header class="nav">
     <span class="mark">Faiq Akrom</span>
-    <nav>
-      <a href="#karya">Karya</a>
-      <a href="#dokumentasi">Dokumentasi</a>
-      <a href="#kontak">Kontak</a>
-    </nav>
+    <div class="nav-controls">
+      <nav>
+        <a href="#karya">Karya</a>
+        <a href="#dokumentasi">Dokumentasi</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti mode tema">
+        <span class="theme-icon" id="themeIcon">🌙</span>
+        <span class="theme-label" id="themeLabel">Gelap</span>
+      </button>
+    </div>
   </header>
 
   <section class="hero">
@@ -33,7 +39,10 @@
 
   <section class="karya" id="karya">
     <div class="section-head">
-      <h2>Karya Terpilih</h2>
+      <div class="section-title-wrap">
+        <h2>Karya Terpilih</h2>
+        <span class="work-counter" id="workCounter">Menampilkan 3 karya</span>
+      </div>
       <div class="filter" id="filter">
         <button class="filter-btn active" data-filter="all">Semua</button>
         <button class="filter-btn" data-filter="app">Aplikasi</button>
@@ -44,7 +53,7 @@
     <div class="work-list" id="workList">
       <a href="#doc-1" class="work-item" data-cat="game">
         <span class="work-year">2026</span>
-        <span class="work-name">Chaosmal Defense — Turn Based Game</span>
+        <span class="work-name">Chaosmal Defense — Tower Defense Game</span>
         <span class="work-role">Game Developer <span class="work-arrow">&darr;</span></span>
       </a>
       <a href="#doc-2" class="work-item" data-cat="app">
@@ -71,7 +80,8 @@
       </a>
     </div>
     <p class="doc-desc">
-      Ini bagian dokumentasi dari portofolio dalam arti lain clip atau tangkapan layar dari projek yang pernah dikerjakan <a href="#karya">Karya &uarr;</a> untuk
+      Ini bagian dokumentasi dari portofolio dalam arti lain clip atau tangkapan layar dari projek yang pernah
+      dikerjakan <a href="#karya">Karya &uarr;</a> untuk
       langsung melompat ke dokumentasi proyek terkait.
     </p>
 
@@ -82,7 +92,7 @@
         <div class="doc-slot-header">
           <div class="doc-slot-meta">
             <span class="doc-slot-badge">Slot 01</span>
-            <h3 class="doc-slot-title">Chaosmal Defense — Turn Based Game</h3>
+            <h3 class="doc-slot-title">Chaosmal Defense — Tower Defense Game</h3>
             <span class="doc-slot-tag">2026 • Game</span>
           </div>
           <a href="#karya" class="doc-back-link">&uarr; Kembali ke Karya</a>
@@ -128,8 +138,38 @@
 
   <footer class="kontak" id="kontak">
     <h2>Mari berdiskusi</h2>
-    <a href="mailto:252410102042@mail.unej.ac.id" class="email">252410102042@mail.unej.ac.id</a>
+    <div class="email-wrapper">
+      <a href="mailto:252410102042@mail.unej.ac.id" class="email" id="emailLink">252410102042@mail.unej.ac.id</a>
+      <button class="copy-btn" id="copyBtn" type="button" aria-label="Salin alamat email">
+        <span class="copy-btn-icon" id="copyBtnIcon">📋</span>
+        <span class="copy-btn-text" id="copyBtnText">Salin</span>
+      </button>
+    </div>
   </footer>
+
+  <!-- Lightbox Modal untuk Dokumentasi Gambar -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Tutup preview">&times;</button>
+      <img src="" alt="" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-info">
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+        <span class="lightbox-hint">Tekan ESC atau klik di luar untuk menutup</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toastNotification" role="status" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-message" id="toastMessage">Email berhasil disalin!</span>
+  </div>
+
+  <!-- Tombol Scroll to Top -->
+  <button class="back-to-top" id="backToTopBtn" type="button" aria-label="Kembali ke atas">
+    &uarr;
+  </button>
 
   <script src="script.js"></script>
 </body>
