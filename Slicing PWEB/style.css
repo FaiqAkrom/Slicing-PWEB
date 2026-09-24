@@ -546,7 +546,20 @@ h1, h2 { font-family: var(--serif); font-weight: 500; }
   transform: translateY(-2px);
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE: TABLET */
+@media (max-width: 820px) {
+  section, .nav, .kontak { padding: 3rem 5vw; }
+  .hero h1 { font-size: 2rem; }
+  .nav-controls { gap: 1.25rem; }
+  .nav nav { gap: 1.25rem; }
+  .work-item {
+    gap: 1rem;
+    padding: 0.85rem 1.4rem;
+  }
+  .doc-slot { padding: 1.35rem; }
+}
+
+/* RESPONSIVE: MOBILE */
 @media (max-width: 640px) {
   .nav {
     flex-direction: column;
